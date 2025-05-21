@@ -72,7 +72,7 @@ const EducationSection = () => {
                     {edu.school}
                   </h3>
                   <p className="text-indigo-600 font-medium mb-3">{edu.degree}</p>
-                  <p className="text-gray-600">{edu.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300">{edu.description}</p>
                 </div>
               </div>
             </motion.div>
