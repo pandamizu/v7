@@ -121,7 +121,7 @@ const HomePage = () => {
       <SkillsSection />
 
       {/* Featured Work Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="section-container">
           <div className="text-center mb-16">
             <span className="text-sm font-medium text-indigo-600 tracking-wider uppercase">
