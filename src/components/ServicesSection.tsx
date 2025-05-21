@@ -42,9 +42,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-900 text-white relative overflow-hidden">
+    <section id="services" className="py-20 bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
       <div 
-        className="absolute top-0 left-0 w-full h-full opacity-10"
+        className="absolute top-0 left-0 w-full h-full opacity-5 dark:opacity-10"
         style={{
           backgroundImage: "url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
           backgroundSize: "cover",
@@ -54,10 +54,10 @@ const ServicesSection = () => {
 
       <div className="section-container relative z-10">
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-indigo-400 tracking-wider uppercase">
+          <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-wider uppercase">
             {t.services.subtitle}
           </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold">{t.services.title}</h2>
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{t.services.title}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -68,18 +68,18 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500/30 transition-all duration-300"
+              className="bg-white/70 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-500/50 transition-all duration-300 shadow-lg"
             >
-              <div className="mb-6 p-3 bg-indigo-500/10 inline-block rounded-lg">
-                {service.icon}
+              <div className="mb-6 p-3 bg-indigo-100 dark:bg-indigo-500/20 inline-block rounded-lg">
+                {React.cloneElement(service.icon, { className: "h-8 w-8 text-indigo-600 dark:text-indigo-400" })}
               </div>
-              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-              <p className="text-gray-400 mb-6">{service.description}</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">{service.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6">{service.description}</p>
               <ul className="space-y-2 mb-6">
                 {service.items.map((item, i) => (
                   <li key={i} className="flex items-center">
-                    <div className="h-1.5 w-1.5 bg-indigo-500 rounded-full mr-2"></div>
-                    <span className="text-gray-300">{item}</span>
+                    <div className="h-1.5 w-1.5 bg-indigo-500 dark:bg-indigo-400 rounded-full mr-2"></div>
+                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -88,7 +88,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <h3 className="text-xl font-semibold mb-6">{t.services.readyToStart}</h3>
+          <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">{t.services.readyToStart}</h3>
           <Link to="/contact" className="btn-primary">
             {t.services.contactMe}
           </Link>

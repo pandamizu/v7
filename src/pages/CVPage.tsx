@@ -192,19 +192,19 @@ const CVPage = () => {
       </section>
 
       {/* CV Content */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-slate-800">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="max-w-4xl mx-auto bg-white dark:bg-slate-700 rounded-2xl shadow-lg overflow-hidden">
             {/* Summary Section */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeInUpVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-slate-600"
             >
-              <h2 className="text-2xl font-bold mb-4">{t.title}</h2>
-              <p className="text-gray-700 leading-relaxed">{t.summary}</p>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{t.title}</h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{t.summary}</p>
             </motion.div>
 
             {/* Experience Section */}
@@ -213,19 +213,19 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-slate-600"
             >
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Briefcase className="w-6 h-6 text-indigo-600" />
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-white">
+                <Briefcase className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 {t.experience.title}
               </h2>
               <div className="space-y-6">
                 <motion.div variants={fadeInUpVariants}>
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold">{t.experience.freelance.title}</h3>
-                    <span className="text-sm text-gray-600">{t.experience.freelance.period}</span>
+                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{t.experience.freelance.title}</h3>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{t.experience.freelance.period}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-4">
                     {t.experience.freelance.achievements.map((achievement, index) => (
                       <motion.li
                         key={index}
@@ -246,20 +246,20 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-slate-600"
             >
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <GraduationCap className="w-6 h-6 text-indigo-600" />
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-white">
+                <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 {t.education.title}
               </h2>
               <motion.div variants={fadeInUpVariants}>
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-semibold">{t.education.university.degree}</h3>
-                  <span className="text-sm text-gray-600">2019 - 2023</span>
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{t.education.university.degree}</h3>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">2019 - 2023</span>
                 </div>
-                <p className="text-gray-700 mb-2">{t.education.university.school}</p>
-                <p className="text-gray-700 mb-2">GPA: 3.61</p>
-                <p className="text-gray-700 italic">{t.education.university.thesis}</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-2">{t.education.university.school}</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-2">GPA: 3.61</p>
+                <p className="text-gray-700 dark:text-gray-300 italic">{t.education.university.thesis}</p>
               </motion.div>
             </motion.div>
 
@@ -269,19 +269,19 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-slate-600"
             >
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Award className="w-6 h-6 text-indigo-600" />
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-white">
+                <Award className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 {t.projects.title}
               </h2>
               <div className="space-y-6">
                 <motion.div variants={fadeInUpVariants}>
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold">{t.projects.film.title}</h3>
-                    <span className="text-sm text-gray-600">{t.projects.film.period}</span>
+                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{t.projects.film.title}</h3>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{t.projects.film.period}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-4">
                     {t.projects.film.details.map((detail, index) => (
                       <motion.li
                         key={index}
@@ -296,10 +296,10 @@ const CVPage = () => {
 
                 <motion.div variants={fadeInUpVariants}>
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold">{t.projects.content.title}</h3>
-                    <span className="text-sm text-gray-600">{t.projects.content.period}</span>
+                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{t.projects.content.title}</h3>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{t.projects.content.period}</span>
                   </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-4">
                     {t.projects.content.details.map((detail, index) => (
                       <motion.li
                         key={index}
@@ -320,9 +320,9 @@ const CVPage = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={staggerContainerVariants}
-              className="p-8 border-b border-gray-100"
+              className="p-8 border-b border-gray-100 dark:border-slate-600"
             >
-              <h2 className="text-2xl font-bold mb-6">{t.technical}</h2>
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t.technical}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   { name: "Adobe Premiere Pro", level: 85 },
@@ -341,16 +341,16 @@ const CVPage = () => {
                     className="space-y-2"
                   >
                     <div className="flex justify-between">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-indigo-600">{skill.level}%</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
+                      <span className="text-indigo-600 dark:text-indigo-400">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-2 bg-gray-100 dark:bg-slate-600 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         transition={{ duration: 0.8, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="h-full bg-indigo-600 rounded-full"
+                        className="h-full bg-indigo-600 dark:bg-indigo-500 rounded-full"
                       ></motion.div>
                     </div>
                   </motion.div>
@@ -366,21 +366,21 @@ const CVPage = () => {
               variants={fadeInUpVariants}
               className="p-8"
             >
-              <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <Globe2 className="w-5 h-5 text-indigo-600" />
+              <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
+                <Globe2 className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                 {t.languages.title}
               </h2>
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">{t.languages.indonesian}</span>
-                    <span className="text-indigo-600">{t.languages.native}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{t.languages.indonesian}</span>
+                    <span className="text-indigo-600 dark:text-indigo-400">{t.languages.native}</span>
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">{t.languages.english}</span>
-                    <span className="text-indigo-600">{t.languages.intermediate}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{t.languages.english}</span>
+                    <span className="text-indigo-600 dark:text-indigo-400">{t.languages.intermediate}</span>
                   </div>
                 </div>
               </div>

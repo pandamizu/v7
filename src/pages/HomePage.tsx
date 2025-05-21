@@ -121,13 +121,13 @@ const HomePage = () => {
       <SkillsSection />
 
       {/* Featured Work Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-slate-800">
         <div className="section-container">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium text-indigo-600 tracking-wider uppercase">
+            <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-wider uppercase">
               Selected Projects
             </span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-bold">Featured Work</h2>
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Featured Work</h2>
           </div>
 
           <motion.div 
@@ -140,7 +140,7 @@ const HomePage = () => {
             {featuredWorks.map((work, index) => (
               <motion.div 
                 key={index}
-                className="card bg-white group"
+                className="card group" /* bg-white and dark:bg-slate-800 is handled by .card in index.css */
                 variants={itemVariants}
               >
                 <div className="relative overflow-hidden">
@@ -156,9 +156,9 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
-                  <p className="text-gray-600 mb-4">{work.description}</p>
-                  <div className="flex items-center text-indigo-600 font-medium">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{work.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">{work.description}</p>
+                  <div className="flex items-center text-indigo-600 dark:text-indigo-400 font-medium">
                     <Link to="/portfolio" className="flex items-center hover:underline">
                       {t.home.viewWork} <ArrowRight size={16} className="ml-1" />
                     </Link>
@@ -206,7 +206,7 @@ const HomePage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Link to="/contact" className="btn-secondary bg-white/10 backdrop-blur-md text-white border-white/30 hover:bg-white/20">
+            <Link to="/contact" className="btn-secondary bg-white/10 backdrop-blur-md text-white border-white/30 hover:bg-white/20 dark:bg-slate-700/50 dark:border-slate-600/50 dark:hover:bg-slate-600/60">
               {t.home.contactMe}
             </Link>
           </motion.div>

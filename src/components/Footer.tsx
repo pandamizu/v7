@@ -48,11 +48,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white relative">
+    <footer className="bg-gradient-to-br from-slate-900 to-slate-800 text-gray-300 dark:from-slate-900 dark:to-slate-800 dark:text-gray-300 relative">
       {/* Scroll to top button */}
       <button
         onClick={scrollToTop}
-        className="absolute -top-5 left-1/2 -translate-x-1/2 bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1"
+        className="absolute -top-5 left-1/2 -translate-x-1/2 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1"
         aria-label="Scroll to top"
       >
         <ArrowUpCircle size={24} />
@@ -66,12 +66,12 @@ const Footer = () => {
             <h3 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
               PANDU
             </h3>
-            <p className="text-gray-400 max-w-xs">
+            <p className="text-gray-400 dark:text-gray-400 max-w-xs">
               {language === 'en' 
                 ? 'Creating stunning 3D designs, engaging video content, and intuitive user interfaces.'
                 : 'Menciptakan desain 3D yang memukau, konten video yang menarik, dan antarmuka pengguna yang intuitif.'}
             </p>
-            <div className="flex items-center space-x-2 text-gray-400">
+            <div className="flex items-center space-x-2 text-gray-400 dark:text-gray-400">
               <MapPin size={16} />
               <span>Gunung Kidul, DI Yogyakarta</span>
             </div>
@@ -79,7 +79,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white dark:text-white">
               {language === 'en' ? 'Quick Links' : 'Tautan Cepat'}
             </h3>
             <ul className="space-y-2">
@@ -87,7 +87,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link 
                     to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-1"
+                    className="text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-indigo-300 transition-colors duration-200 flex items-center space-x-1"
                   >
                     <span>{link.name}</span>
                   </Link>
@@ -98,20 +98,20 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white dark:text-white">
               {language === 'en' ? 'Contact Info' : 'Informasi Kontak'}
             </h3>
             <div className="space-y-3">
               <a 
                 href="mailto:pandutirta25@gmail.com"
-                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-indigo-300 transition-colors duration-200"
               >
                 <Mail size={16} />
                 <span>pandutirta25@gmail.com</span>
               </a>
               <a 
                 href="tel:+6287737783462"
-                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-indigo-300 transition-colors duration-200"
               >
                 <Phone size={16} />
                 <span>+62 877-3778-3462</span>
@@ -121,7 +121,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white dark:text-white">
               {language === 'en' ? 'Connect' : 'Terhubung'}
             </h3>
             <div className="flex flex-col space-y-4">
@@ -131,9 +131,9 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-2 text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-indigo-300 transition-colors duration-200"
                 >
-                  {social.icon}
+                  {React.cloneElement(social.icon, { className: "text-gray-400 dark:text-gray-400 group-hover:text-white dark:group-hover:text-indigo-300"})}
                   <span>{social.name}</span>
                 </a>
               ))}
@@ -142,9 +142,9 @@ const Footer = () => {
         </div>
 
         {/* Footer bottom */}
-        <div className="border-t border-gray-800 py-6">
+        <div className="border-t border-slate-700 dark:border-slate-700 py-6">
           <div className="text-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 dark:text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} Pandu Tirta Buana. 
               {language === 'en' 
                 ? ' All rights reserved.'
