@@ -48,7 +48,7 @@ const EducationSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-md overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
             >
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3 relative">
