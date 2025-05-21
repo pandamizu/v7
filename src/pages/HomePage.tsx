@@ -157,7 +157,7 @@ const HomePage = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
-                  <p className="text-gray-600 mb-4">{work.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">{work.description}</p>
                   <div className="flex items-center text-indigo-600 font-medium">
                     <Link to="/portfolio" className="flex items-center hover:underline">
                       {t.home.viewWork} <ArrowRight size={16} className="ml-1" />
