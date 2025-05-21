@@ -35,7 +35,7 @@ const EducationSection = () => {
           <span className="text-sm font-medium text-indigo-600 tracking-wider uppercase">
             {language === 'en' ? 'Education' : 'Pendidikan'}
           </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold">
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             {language === 'en' ? 'Academic Background' : 'Latar Belakang Akademik'}
           </h2>
         </div>
