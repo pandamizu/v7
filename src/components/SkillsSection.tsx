@@ -81,13 +81,13 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-900 text-white">
+    <section className="py-20 bg-gray-50 dark:bg-slate-900">
       <div className="section-container">
         <div className="text-center mb-16">
-          <span className="text-sm font-medium text-indigo-400 tracking-wider uppercase">
+          <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 tracking-wider uppercase">
             {language === 'en' ? 'My Skills' : 'Keahlian Saya'}
           </span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold">
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             {language === 'en' ? 'Skills & Expertise' : 'Keahlian & Ketrampilan'}
           </h2>
         </div>
@@ -101,26 +101,26 @@ const SkillsSection = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold mb-8">
+            <h3 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-white">
               {language === 'en' ? 'Technical Skills' : 'Keahlian Teknis'}
             </h3>
             {hardSkills.map((skill, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-gray-800 p-6 rounded-xl border border-gray-700"
+                className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm"
               >
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-indigo-400">{skill.level}%</span>
+                  <span className="font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
+                  <span className="text-indigo-600 dark:text-indigo-400">{skill.level}%</span>
                 </div>
-                <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div className="h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
                     transition={{ duration: 1, delay: index * 0.1 }}
                     viewport={{ once: true, amount: 0.4 }}
-                    className="h-full bg-gradient-to-r from-indigo-500 to-blue-500"
+                    className="h-full bg-gradient-to-r from-indigo-500 to-blue-500 dark:from-indigo-600 dark:to-blue-600"
                   ></motion.div>
                 </div>
               </motion.div>
@@ -135,7 +135,7 @@ const SkillsSection = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold mb-8">
+            <h3 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-white">
               {language === 'en' ? 'Soft Skills' : 'Keahlian Non-Teknis'}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -146,13 +146,13 @@ const SkillsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-800 p-6 rounded-xl border border-gray-700"
+                  className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm"
                 >
-                  <div className="mb-4 p-2 bg-gray-700 inline-block rounded-lg">
-                    {skill.icon}
+                  <div className="mb-4 p-2 bg-indigo-50 dark:bg-indigo-900/30 inline-block rounded-lg">
+                    {React.cloneElement(skill.icon, { className: "h-6 w-6 text-indigo-600 dark:text-indigo-400"})}
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">{skill.name}</h4>
-                  <p className="text-gray-400 text-sm">{skill.description}</p>
+                  <h4 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">{skill.name}</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{skill.description}</p>
                 </motion.div>
               ))}
             </div>
